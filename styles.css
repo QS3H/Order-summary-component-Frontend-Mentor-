@@ -1,0 +1,271 @@
+:root {
+  /* Fonts */
+  --font-primary: "Red Hat Display", sans-serif;
+
+  /* Font weights */
+  --font-weight-regular: 500;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 900;
+
+  /* Font sizes */
+  --font-size-300: 0.875rem;
+  --font-size-400: 1.125rem;
+  --font-size-500: 1.25rem;
+  --font-size-600: 1.5rem;
+  --font-size-700: 1.75rem;
+  --font-size-800: 2rem;
+
+  /* Colors */
+  --clr-primary: hsl(225, 100%, 94%);
+  --clr-primary-dark: hsl(245, 75%, 52%);
+
+  --Neutral-pale-blue: hsl(225, 100%, 98%);
+  --Neutral-Desaturated-blue: hsl(224, 23%, 55%);
+  --Neutral-dark-blue: hsl(223, 47%, 23%);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-400);
+  font-weight: var(--font-weight-regular);
+  color: var(--Neutral-Desaturated-blue);
+  background: var(--clr-primary);
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2,
+h3,
+h4 {
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: var(--font-size-700);
+  color: var(--Neutral-dark-blue);
+  font-weight: var(--font-weight-extra-bold);
+}
+
+/* composition */
+.grid-flow {
+  display: grid;
+  gap: 1rem;
+}
+
+.flex-row {
+  display: flex;
+  gap: 1rem;
+}
+
+/* utility */
+.padding-24 {
+  padding: 1rem;
+}
+
+.padding-48 {
+  padding: 3rem;
+}
+
+.text-dark {
+  color: var(--Neutral-dark-blue);
+}
+
+.text-sub {
+  color: var(--Neutral-Desaturated-blue);
+}
+
+.bg-white {
+  background: #fff;
+}
+
+.bg-neutral {
+  background: var(--Neutral-pale-blue);
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.fw-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.fw-extra-bold {
+  font-weight: var(--font-weight-extra-bold);
+}
+
+.br-1 {
+  border-radius: 0.5rem;
+}
+
+.br-2 {
+  border-radius: 1rem;
+}
+
+a,
+.link {
+  background-color: transparent;
+  border: 0;
+  color: var(--clr-primary-dark);
+  text-decoration: underline;
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+}
+
+a:hover,
+a:focus,
+.link:hover,
+.link:focus {
+  color: hsl(245, 75%, 62%);
+  text-decoration: none;
+}
+
+.push-right {
+  margin-left: auto;
+}
+
+/* Block */
+.btn {
+  background-color: transparent;
+  padding: 1em 2em;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  font-weight: var(--font-weight-bold);
+  border-radius: 0.5rem;
+}
+
+.btn[data-type="primary"] {
+  background-color: var(--clr-primary-dark);
+  color: var(--Neutral-pale-blue);
+}
+
+.btn[data-type="primary"]:hover,
+.btn[data-type="primary"]:focus {
+  background-color: hsl(245, 75%, 62%);
+}
+
+.btn[data-type="secondary"] {
+  color: var(--Neutral-Desaturated-blue);
+  padding: 0;
+}
+
+.btn[data-type="secondary"]:hover,
+.btn[data-type="secondary"]:focus {
+  color: var(--Neutral-dark-blue);
+}
+
+.card {
+  overflow: hidden;
+  max-width: 450px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.plan__details {
+  line-height: 1;
+}
