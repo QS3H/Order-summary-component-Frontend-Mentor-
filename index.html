@@ -23,33 +23,39 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="[ card ] [ bg-white text-align-center br-2 ]">
-      <img
-        src="./images/illustration-hero.svg"
-        alt="person dancing illustration"
-        class="card__img"
-      />
-      <div class="[ card__content ] [ grid-flow ] [ padding-48 ]">
-        <h2 class="card__title">Order Summary</h2>
-        <p class="card__text card__text--gray">
-          You can now listen to millions of songs, audiobooks, and podcasts on
-          any device anywhere you like!
-        </p>
-        <div
-          class="[ flex-row ] [ bg-neutral text-align-left br-1 padding-24 ]"
-        >
-          <div>
-            <img src="./images/icon-music.svg" class="plan__icon" />
+    <main>
+      <div class="[ card ] [ bg-white text-align-center br-2 ]">
+        <img
+          src="./images/illustration-hero.svg"
+          alt="person dancing illustration"
+          class="card__img"
+        />
+        <div class="[ card__content ] [ grid-flow ] [ padding-48 ]">
+          <h2 class="card__title">Order Summary</h2>
+          <p class="card__text card__text--gray">
+            You can now listen to millions of songs, audiobooks, and podcasts on
+            any device anywhere you like!
+          </p>
+          <div
+            class="[ flex-row ] [ bg-neutral text-align-left br-1 padding-24 ]"
+          >
+            <div>
+              <img
+                src="./images/icon-music.svg"
+                class="plan__icon"
+                alt="music icon"
+              />
+            </div>
+            <div>
+              <p class="fw-extra-bold text-dark">Annual Plan</p>
+              <p>$59.99/year</p>
+            </div>
+            <button class="link push-right">Change</button>
           </div>
-          <div>
-            <p class="fw-extra-bold text-dark">Annual Plan</p>
-            <p>$59.99/year</p>
-          </div>
-          <button class="link push-right">Change</button>
+          <button class="btn" data-type="primary">Proceed to Payment</button>
+          <button class="btn" data-type="secondary">Cancel Order</button>
         </div>
-        <button class="btn" data-type="primary">Proceed to Payment</button>
-        <button class="btn" data-type="secondary">Cancel Order</button>
       </div>
-    </div>
+    </main>
   </body>
 </html>
